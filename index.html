@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maha Saleemi — Conversion Copywriter for Dermatology & Aesthetic Clinics</title>
+  <meta name="description" content="Conversion Copywriter for dermatology and aesthetic clinics across Pakistan, UAE, and Qatar. Closing the consult-to-booking gap with zero-fluff, revenue-focused copy." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              DEFAULT: '#F7F3EE',
+              light: '#FAF8F5',
+              dark: '#ECE5DA'
+            },
+            blush: {
+              DEFAULT: '#E8C4C4',
+              light: '#F6E6E6',
+              dark: '#D9A9A9',
+              accent: '#A86868'
+            },
+            charcoal: {
+              DEFAULT: '#161513',
+              surface: '#1E1C19',
+              card: '#252320',
+              border: '#322F2B'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            editorial: ['"Fraunces"', 'Georgia', 'serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            code: ['"JetBrains Mono"', 'Menlo', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Base typography and smooth behavior */
+    html {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      scroll-behavior: smooth;
+      background-color: #F7F3EE;
+      color: #161513;
+    }
+    
+    .font-editorial { font-family: 'Fraunces', Georgia, serif; }
+    .font-code { font-family: 'JetBrains Mono', monospace; }
+    
+    /* Background subtle grid patterns */
+    .bg-grid-clinical {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(22, 21, 19, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(22, 21, 19, 0.04) 1px, transparent 1px);
+    }
+    
+    .bg-grid-dark {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(232, 196, 196, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(232, 196, 196, 0.04) 1px, transparent 1px);
+    }
+
+    /* Script beat highlighting */
+    .beat-hook { border-left: 3px solid #A86868; }
+    .beat-problem { border-left: 3px solid #D9A9A9; }
+    .beat-unique { border-left: 3px solid #748770; }
+    .beat-cta { border-left: 3px solid #161513; }
+
+    /* Custom scrollbars */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #F7F3EE; }
+    ::-webkit-scrollbar-thumb { background: #D9A9A9; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #A86868; }
+
+    /* Toast notification */
+    #toast {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-[#F7F3EE] text-[#161513] antialiased selection:bg-[#E8C4C4] selection:text-[#161513]">
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none bg-[#161513] text-white px-4 py-3 rounded-none shadow-2xl border border-[#E8C4C4]/40 flex items-center gap-3 font-code text-xs">
+    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <span id="toast-message">Copied to clipboard</span>
+  </div>
+
+  <!-- STICKY TOP NAVIGATION -->
+  <header id="main-nav" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-[#161513]/90 backdrop-blur-md border-b border-[#322F2B] py-3.5 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#hero" class="group flex items-center gap-3 transition-opacity cursor-pointer">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#E8C4C4] group-hover:scale-125 transition-transform"></span>
+        <div class="flex flex-col">
+          <span class="font-editorial text-lg sm:text-xl font-semibold tracking-wide text-white group-hover:text-[#E8C4C4] transition-colors">
+            Maha Saleemi
+          </span>
+          <span class="font-code text-[10px] tracking-widest text-[#E8C4C4]/80 uppercase">
+            Dermatology & Aesthetic Copy
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="#about" class="text-xs font-code uppercase tracking-wider text-stone-300 hover:text-white transition-colors">Positioning</a>
+        <a href="#services" class="text-xs font-code uppercase tracking-wider text-stone-300 hover:text-white transition-colors">Services</a>
+        <a href="#spec-work" class="text-xs font-code uppercase tracking-wider text-[#E8C4C4] font-medium hover:text-white transition-colors relative py-1">
+          Spec Work
+          <span class="absolute -bottom-0.5 left-0 w-full h-[1px] bg-[#E8C4C4]/60"></span>
+        </a>
+        <a href="#calculator" class="text-xs font-code uppercase tracking-wider text-stone-300 hover:text-white transition-colors">Calculator</a>
+        <a href="#credentials" class="text-xs font-code uppercase tracking-wider text-stone-300 hover:text-white transition-colors">Credentials</a>
+        <a href="#contact" class="text-xs font-code uppercase tracking-wider text-stone-300 hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahasaleemi@gmail.com&su=Let's%20talk&body=Hi%20Maha%2C%0A%0AI'd%20like%20to%20discuss%20conversion%20copywriting%20for%20our%20clinic.%0A%0A" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-code tracking-wider uppercase bg-[#E8C4C4] text-[#161513] font-semibold hover:bg-white transition-all duration-200 shadow-sm">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>Email Me</span>
+          <svg class="w-3 h-3 text-[#161513]/70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-toggle-btn" class="md:hidden p-2 text-stone-200 hover:text-white transition-colors" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#161513] border-b border-[#322F2B] px-6 py-6 space-y-4 shadow-xl">
+      <div class="flex flex-col space-y-3">
+        <a href="#about" class="text-sm font-code uppercase tracking-wider py-2 border-b border-stone-800 text-stone-300 flex items-center justify-between">
+          <span>Positioning</span>
+          <svg class="w-4 h-4 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="text-sm font-code uppercase tracking-wider py-2 border-b border-stone-800 text-stone-300 flex items-center justify-between">
+          <span>Services</span>
+          <svg class="w-4 h-4 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#spec-work" class="text-sm font-code uppercase tracking-wider py-2 border-b border-stone-800 text-[#E8C4C4] font-semibold flex items-center justify-between">
+          <span>Spec Work</span>
+          <svg class="w-4 h-4 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#calculator" class="text-sm font-code uppercase tracking-wider py-2 border-b border-stone-800 text-stone-300 flex items-center justify-between">
+          <span>Calculator</span>
+          <svg class="w-4 h-4 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#credentials" class="text-sm font-code uppercase tracking-wider py-2 border-b border-stone-800 text-stone-300 flex items-center justify-between">
+          <span>Credentials</span>
+          <svg class="w-4 h-4 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="text-sm font-code uppercase tracking-wider py-2 border-b border-stone-800 text-stone-300 flex items-center justify-between">
+          <span>Contact</span>
+          <svg class="w-4 h-4 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="pt-3">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahasaleemi@gmail.com&su=Let's%20talk&body=Hi%20Maha%2C%0A%0AI'd%20like%20to%20discuss%20conversion%20copywriting%20for%20our%20clinic.%0A%0A" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-xs font-code tracking-wider uppercase bg-[#E8C4C4] text-[#161513] font-semibold hover:bg-white transition-colors">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>Email Me (mahasaleemi@gmail.com)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section id="hero" class="relative min-h-screen pt-32 pb-20 bg-[#161513] text-stone-100 flex items-center overflow-hidden border-b border-[#322F2B]">
+    <!-- Background SVG Art -->
+    <div class="absolute inset-0 bg-grid-dark pointer-events-none opacity-40"></div>
+    <div class="absolute -top-16 -right-16 pointer-events-none opacity-20 transform rotate-12">
+      <svg viewBox="0 0 200 200" fill="none" class="w-[500px] h-[500px]" style="opacity: 0.4">
+        <path d="M20 180 C 60 140, 100 110, 170 30" stroke="#E8C4C4" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M70 135 C 50 115, 45 95, 60 85 C 75 75, 90 95, 70 135" stroke="#E8C4C4" stroke-width="1" stroke-linecap="round"/>
+        <path d="M105 105 C 130 90, 140 70, 130 60 C 118 50, 100 75, 105 105" stroke="#E8C4C4" stroke-width="1" stroke-linecap="round"/>
+        <path d="M135 75 C 120 50, 115 35, 130 25 C 145 15, 155 45, 135 75" stroke="#E8C4C4" stroke-width="1" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        <!-- Target Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-stone-300 font-code text-xs tracking-wider uppercase">
+          <span class="w-2 h-2 rounded-full bg-[#E8C4C4] animate-pulse"></span>
+          <span>Dermatology & Aesthetic Practices</span>
+          <span class="text-stone-500">|</span>
+          <span class="text-[#E8C4C4]">Pakistan · UAE · Qatar</span>
+        </div>
+
+        <!-- Hero Headline -->
+        <h1 class="font-editorial text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-white leading-[1.12]">
+          Your clinic doesn't have a traffic problem. <br />
+          <span class="italic font-normal text-[#E8C4C4]">It has a consult-to-booking gap.</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-stone-300 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed font-light">
+          Patients show up for consultations, nod along, and leave saying <span class="text-white italic">"I'll think about it."</span> I write conversion copy that turns high-intent consultations into booked, multi-session treatment packages.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="#spec-work" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E8C4C4] text-[#161513] font-code text-xs uppercase tracking-widest font-bold hover:bg-white transition-all duration-200 shadow-lg group">
+            <span>View Case Study & Spec Work</span>
+            <svg class="w-4 h-4 text-[#161513] group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahasaleemi@gmail.com&su=Let's%20talk&body=Hi%20Maha%2C%0A%0AI'd%20like%20to%20discuss%20conversion%20copywriting%20for%20our%20clinic.%0A%0A" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-stone-600 hover:border-[#E8C4C4] text-white font-code text-xs uppercase tracking-widest font-semibold transition-all duration-200 group">
+            <svg class="w-4 h-4 text-[#E8C4C4]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>Email Me</span>
+            <svg class="w-4 h-4 text-stone-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+
+        <!-- 3 Pillars Bar -->
+        <div class="pt-8 border-t border-[#322F2B]/80 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+          <div class="flex items-start gap-3 p-3.5 bg-white/[0.02] border border-white/5 hover:border-[#E8C4C4]/20 transition-colors">
+            <span class="font-code text-xs text-[#E8C4C4] font-semibold mt-0.5">01</span>
+            <div>
+              <p class="text-xs font-code uppercase tracking-wider text-stone-200 font-semibold">
+                Dismantles Disillusionment
+              </p>
+              <p class="text-xs text-stone-400 mt-1 leading-relaxed">
+                Validates patients burned by generic salon fads by explaining real clinical mechanisms and rebuilding genuine trust.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-3.5 bg-white/[0.02] border border-white/5 hover:border-[#E8C4C4]/20 transition-colors">
+            <span class="font-code text-xs text-[#E8C4C4] font-semibold mt-0.5">02</span>
+            <div>
+              <p class="text-xs font-code uppercase tracking-wider text-stone-200 font-semibold">
+                Eliminates Upsell Anxiety
+              </p>
+              <p class="text-xs text-stone-400 mt-1 leading-relaxed">
+                Addresses the #1 unspoken fear—hidden costs and aggressive sales—establishing clinical safety before the room.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-3.5 bg-white/[0.02] border border-white/5 hover:border-[#E8C4C4]/20 transition-colors">
+            <span class="font-code text-xs text-[#E8C4C4] font-semibold mt-0.5">03</span>
+            <div>
+              <p class="text-xs font-code uppercase tracking-wider text-stone-200 font-semibold">
+                Pre-Empts Consult Dropoff
+              </p>
+              <p class="text-xs text-stone-400 mt-1 leading-relaxed">
+                Replaces post-consult silence with empathetic nurture that resolves downtime and budget doubts into booked packages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. POSITIONING & ABOUT SECTION -->
+  <section id="about" class="relative py-24 sm:py-32 bg-[#F7F3EE] text-[#161513] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#ECE5DA] border border-[#DDD4C5] font-code text-[11px] uppercase tracking-widest text-[#161513] mb-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#161513]"></span>
+          <span>[CLINICAL REALITY]</span>
+        </div>
+        <h2 class="font-editorial text-3xl sm:text-5xl font-medium tracking-tight leading-[1.15] text-[#161513] mb-6">
+          The real leak isn't traffic, or even the consult. <br />
+          <span class="italic font-normal text-[#A86868]">It's the words around it.</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7 bg-white border border-[#E5DEC9] p-8 sm:p-10 shadow-sm relative">
+          <span class="absolute top-0 left-0 w-1.5 h-full bg-[#161513]"></span>
+          <p class="font-editorial text-xl sm:text-2xl leading-relaxed text-[#161513] font-normal mb-6">
+            Aesthetic patients are uniquely skeptical. They have been burned by 10-step skincare routines that wrecked their barrier, rushed 5-minute doctor visits, and MedSpa upselling.
+          </p>
+          <p class="text-stone-700 text-sm sm:text-base leading-relaxed mb-6 font-light">
+            When they step into your clinic, their guard is up. If your pre-consult copy doesn't validate their past disappointments, explain the exact treatment mechanism, and disarm their fear of high-pressure sales, they will leave your consultation room without booking.
+          </p>
+          <div className="pt-4 border-t border-[#F0EBE1] flex items-center justify-between text-xs font-code text-stone-500">
+            <span>Specialization: Aesthetic & Dermatology Funnels</span>
+            <span class="text-[#A86868] font-semibold">Consult-to-Booking Focus</span>
+          </div>
+        </div>
+
+        <!-- Diagnostic comparison box -->
+        <div class="lg:col-span-5 bg-[#FAF8F5] border border-[#E2DAD0] p-7 space-y-6">
+          <div class="border-b border-[#E2DAD0] pb-4">
+            <span class="font-code text-xs font-bold uppercase tracking-wider text-[#A86868]">
+              THE CLINICAL LEAK DIAGNOSIS
+            </span>
+            <h3 class="font-editorial text-lg font-semibold mt-1">
+              Why Standard Agency Copy Fails Clinics
+            </h3>
+          </div>
+
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div class="flex items-start gap-3 p-3 bg-rose-50/70 border border-rose-200">
+              <svg class="w-4 h-4 text-rose-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              <div>
+                <strong class="block text-rose-950 font-semibold mb-0.5">Generic Agency Copy</strong>
+                <p class="text-stone-700">Relies on generic fluff ("Glow from within", "Unlock confidence") that attracts low-intent price shoppers who drop off post-consult.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3 bg-emerald-50/70 border border-emerald-200">
+              <svg class="w-4 h-4 text-emerald-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div>
+                <strong class="block text-emerald-950 font-semibold mb-0.5">The Conversion Copy System</strong>
+                <p class="text-stone-700">Pre-qualifies intent, explains treatment mechanisms, and highlights a clear zero-upsell policy to lock in treatment packages.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SERVICES: INTEGRATED CONVERSION SYSTEM -->
+  <section id="services" class="py-24 sm:py-32 bg-[#FAF8F5] text-[#161513] border-t border-[#EAE3D6] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#ECE5DA] border border-[#DDD4C5] font-code text-[11px] uppercase tracking-widest text-[#161513] mb-4">
+            <svg class="w-3.5 h-3.5 text-[#161513]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            <span>[INTEGRATED CONVERSION SYSTEM]</span>
+          </div>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-medium tracking-tight text-[#161513]">
+            Three Phases. Three Services. <br />
+            <span class="italic font-normal text-[#A86868]">One Integrated System.</span>
+          </h2>
+        </div>
+        <p class="text-stone-600 text-sm max-w-md mt-4 md:mt-0 font-light leading-relaxed">
+          I don't write isolated ad copy or random emails. I engineer a complete 3-stage conversion funnel designed to systematically eliminate patient dropoff.
+        </p>
+      </div>
+
+      <!-- 3 Unified Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Card 1: Pre-qualify -->
+        <div class="bg-white border border-[#E5DEC9] p-8 sm:p-9 flex flex-col justify-between hover:border-[#161513] transition-all duration-300 shadow-sm relative group">
+          <div>
+            <div class="flex items-center justify-between border-b border-[#F0EBE1] pb-4 mb-6">
+              <span class="font-code text-xs font-bold text-stone-500 tracking-wider uppercase">
+                01 // PRE-QUALIFY
+              </span>
+              <div class="p-2.5 bg-[#FAF8F5] border border-[#E5DEC9]">
+                <svg class="w-5 h-5 text-[#A86868]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+            </div>
+
+            <span class="inline-block px-2.5 py-0.5 bg-[#F4DFDF] text-[#161513] text-[11px] font-code font-semibold tracking-wider uppercase mb-3">
+              Direct-Response Ad Copy
+            </span>
+
+            <h3 class="font-editorial text-2xl font-semibold text-[#161513] mb-3 leading-snug">
+              Filters out window-shoppers before they click
+            </h3>
+
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              High-intent ad scripts and copy engineered around patient skepticism, doctor-patient trust, and distinct treatment entry points that lower CPA while attracting qualified patients.
+            </p>
+
+            <div class="space-y-2.5 mb-6">
+              <span class="font-code text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">
+                Strategic Focus:
+              </span>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Multi-angle hooks addressing patient doubts (past bad treatments, hidden costs)</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Doctor-patient authority perspective that builds instant clinical trust</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Explicit pain point targeting for high-ticket treatment packages</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Clear rationale notes explaining why each ad angle works for media buyers</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-4 border-t border-[#F0EBE1]">
+            <div class="bg-[#FAF8F5] border border-[#EAE3D6] p-3.5 text-xs font-code text-stone-700">
+              <span class="text-[10px] text-stone-500 block uppercase font-bold tracking-wider mb-1">
+                Deliverable Spec:
+              </span>
+              5+ distinct direct-response ad scripts tested across cold, warm, and retargeted audiences.
+            </div>
+            <div class="bg-[#FAF8F5] border-l-2 border-[#161513] p-3.5 text-xs text-stone-800">
+              <span class="font-code text-[10px] uppercase text-[#A86868] font-bold block tracking-wider mb-0.5">
+                Target Impact:
+              </span>
+              <p class="font-medium">Reduces unqualified consult no-shows and eliminates low-ticket price shoppers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Pre-sell -->
+        <div class="bg-white border border-[#E5DEC9] p-8 sm:p-9 flex flex-col justify-between hover:border-[#161513] transition-all duration-300 shadow-sm relative group">
+          <div>
+            <div class="flex items-center justify-between border-b border-[#F0EBE1] pb-4 mb-6">
+              <span class="font-code text-xs font-bold text-stone-500 tracking-wider uppercase">
+                02 // PRE-SELL
+              </span>
+              <div class="p-2.5 bg-[#FAF8F5] border border-[#E5DEC9]">
+                <svg class="w-5 h-5 text-[#A86868]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              </div>
+            </div>
+
+            <span class="inline-block px-2.5 py-0.5 bg-[#F4DFDF] text-[#161513] text-[11px] font-code font-semibold tracking-wider uppercase mb-3">
+              Video Sales Letter (VSL) Scripts
+            </span>
+
+            <h3 class="font-editorial text-2xl font-semibold text-[#161513] mb-3 leading-snug">
+              Builds unshakeable clinical trust before the consult
+            </h3>
+
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              Comprehensive 6–9 minute scripts structured to build clinical credibility, explain treatment mechanisms, and reassure patients tired of aggressive sales pitches.
+            </p>
+
+            <div class="space-y-2.5 mb-6">
+              <span class="font-code text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">
+                Strategic Focus:
+              </span>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Clear explanation of treatment mechanisms ('Calm first, then clarity')</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Zero-upsell policy positioning to disarm patient skepticism</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Milestone timeline showing expected results at Week 2, 4, and 8</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Simple filming notes and visual cues for your video recording</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-4 border-t border-[#F0EBE1]">
+            <div class="bg-[#FAF8F5] border border-[#EAE3D6] p-3.5 text-xs font-code text-stone-700">
+              <span class="text-[10px] text-stone-500 block uppercase font-bold tracking-wider mb-1">
+                Deliverable Spec:
+              </span>
+              Full 11-beat VSL script with visual cues, pacing benchmarks, and on-screen text directions.
+            </div>
+            <div class="bg-[#FAF8F5] border-l-2 border-[#161513] p-3.5 text-xs text-stone-800">
+              <span class="font-code text-[10px] uppercase text-[#A86868] font-bold block tracking-wider mb-0.5">
+                Target Impact:
+              </span>
+              <p class="font-medium">Primed patients walk into the consultation ready to begin treatment immediately.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Win Back -->
+        <div class="bg-white border border-[#E5DEC9] p-8 sm:p-9 flex flex-col justify-between hover:border-[#161513] transition-all duration-300 shadow-sm relative group">
+          <div>
+            <div class="flex items-center justify-between border-b border-[#F0EBE1] pb-4 mb-6">
+              <span class="font-code text-xs font-bold text-stone-500 tracking-wider uppercase">
+                03 // WIN BACK
+              </span>
+              <div class="p-2.5 bg-[#FAF8F5] border border-[#E5DEC9]">
+                <svg class="w-5 h-5 text-[#161513]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+            </div>
+
+            <span class="inline-block px-2.5 py-0.5 bg-[#F4DFDF] text-[#161513] text-[11px] font-code font-semibold tracking-wider uppercase mb-3">
+              Patient Recovery Email Sequence
+            </span>
+
+            <h3 class="font-editorial text-2xl font-semibold text-[#161513] mb-3 leading-snug">
+              Recovers patients who consulted but didn't book
+            </h3>
+
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              Post-consult follow-up emails that educate, address hesitations, and turn 'I need to think about it' consultations into booked treatment packages without discounting.
+            </p>
+
+            <div class="space-y-2.5 mb-6">
+              <span class="font-code text-[11px] uppercase tracking-wider text-stone-500 font-semibold block">
+                Strategic Focus:
+              </span>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>7-email follow-up sequence that builds trust before presenting the offer (no sales pitch in first 4 emails)</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Clear answers to common patient objections after past treatment disappointments</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Thoughtful messaging that turns consultation appointments into booked treatment packages</span>
+              </div>
+              <div class="flex items-start gap-2.5 text-xs text-stone-700 leading-relaxed">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#E8C4C4] mt-1.5 shrink-0"></span>
+                <span>Timely follow-up reminders based on practitioner schedule and availability</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-4 border-t border-[#F0EBE1]">
+            <div class="bg-[#FAF8F5] border border-[#EAE3D6] p-3.5 text-xs font-code text-stone-700">
+              <span class="text-[10px] text-stone-500 block uppercase font-bold tracking-wider mb-1">
+                Deliverable Spec:
+              </span>
+              Complete multi-email nurture sequence with subject lines, preview text, and strategic notes.
+            </div>
+            <div class="bg-[#FAF8F5] border-l-2 border-[#161513] p-3.5 text-xs text-stone-800">
+              <span class="font-code text-[10px] uppercase text-[#A86868] font-bold block tracking-wider mb-0.5">
+                Target Impact:
+              </span>
+              <p class="font-medium">Converts 15–20% of 'I need to think about it' consults into paid multi-session packages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SPEC WORK & CASE STUDY SHOWCASE (FULL INTERACTIVE VIEWER) -->
+  <section id="spec-work" class="py-24 sm:py-32 bg-[#F7F3EE] text-[#161513] border-t border-[#EAE3D6] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#161513] text-[#E8C4C4] font-code text-xs tracking-widest uppercase mb-4">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>PORTFOLIO CASE STUDY</span>
+        </div>
+        <h2 class="font-editorial text-3xl sm:text-5xl font-medium tracking-tight text-[#161513] mb-4">
+          Clearwell Dermatology: <br />
+          <span class="italic font-normal text-[#A86868]">Adult Acne Multi-Session Conversion Campaign</span>
+        </h2>
+        <p class="text-stone-600 text-sm sm:text-base leading-relaxed font-light">
+          A full-funnel spec campaign built for high-ticket dermatological protocols ($150–$350/session / $600–$1,200 package). Explore verbatim ad copy, the 7-email follow-up arc, and the full 11-beat VSL script below.
+        </p>
+      </div>
+
+      <!-- Spec Work Navigation Tabs -->
+      <div class="flex flex-wrap gap-2 border-b border-[#DDD4C5] pb-4 mb-10">
+        <button id="tab-btn-ad-copy" onclick="switchSpecTab('ad-copy')" class="px-5 py-3 font-code text-xs uppercase tracking-wider font-bold transition-all duration-200 bg-[#161513] text-white shadow-sm flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>Ad Copy (5 Scripts)</span>
+        </button>
+
+        <button id="tab-btn-email-sequence" onclick="switchSpecTab('email-sequence')" class="px-5 py-3 font-code text-xs uppercase tracking-wider font-bold transition-all duration-200 bg-white text-stone-700 border border-[#DDD4C5] hover:border-[#161513] flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>Email Sequence (7 Emails)</span>
+        </button>
+
+        <button id="tab-btn-vsl-script" onclick="switchSpecTab('vsl-script')" class="px-5 py-3 font-code text-xs uppercase tracking-wider font-bold transition-all duration-200 bg-white text-stone-700 border border-[#DDD4C5] hover:border-[#161513] flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span>VSL Script (11 Beats)</span>
+        </button>
+      </div>
+
+      <!-- TAB 1 CONTENT: AD SCRIPTS -->
+      <div id="spec-content-ad-copy" class="space-y-8">
+        <div class="bg-[#FAF8F5] border border-[#E5DEC9] p-6 sm:p-8">
+          <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-6 border-b border-[#EAE3D6]">
+            <div>
+              <span class="font-code text-xs font-bold uppercase tracking-widest text-[#A86868] block mb-1">
+                CAMPAIGN SPECIFICATION
+              </span>
+              <h3 class="font-editorial text-2xl font-semibold text-[#161513]">
+                Adult Acne Multi-Session Treatment Program (Meta Ads)
+              </h3>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-[#E5DEC9] text-xs font-code text-stone-700">
+              <svg class="w-3.5 h-3.5 text-[#A86868]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <span>Offer: $150–$350 Single / $600–$1,200 Package</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 text-xs sm:text-sm">
+            <div>
+              <span class="font-code text-[11px] uppercase tracking-wider text-stone-500 font-semibold block mb-1">Client Brief:</span>
+              <p class="text-stone-700 leading-relaxed">Direct-response ad scripts for a medical-grade acne program targeting adults 20-30 disillusioned with rushed clinic visits and MedSpa upsells.</p>
+            </div>
+            <div>
+              <span class="font-code text-[11px] uppercase tracking-wider text-stone-500 font-semibold block mb-1">Strategic Approach:</span>
+              <p class="text-stone-700 leading-relaxed">Built from a first-person dermatologist POV to establish immediate clinical authority and dismantle skepticism before presenting the offer.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Ad Cards -->
+        <div class="space-y-8" id="ad-scripts-container">
+          <!-- Ad 1 -->
+          <div class="bg-white border border-[#E5DEC9] shadow-sm">
+            <div class="bg-[#FAF8F5] border-b border-[#EAE3D6] p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="px-2.5 py-0.5 bg-[#161513] text-white font-code text-xs font-bold uppercase">AD 01</span>
+                  <span class="px-2.5 py-0.5 border text-xs font-code bg-purple-50 text-purple-800 border-purple-200">Audience: Cold to warm</span>
+                </div>
+                <h4 class="font-editorial text-2xl font-semibold text-[#161513]">"The Five Minute Visit"</h4>
+              </div>
+              <button onclick="copyAdScript(1)" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-[#DDD4C5] hover:border-[#161513] text-xs font-code text-stone-700 transition-colors">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                <span>Copy Script</span>
+              </button>
+            </div>
+            <div class="p-6 sm:p-8 space-y-5 text-sm sm:text-base">
+              <div class="beat-hook pl-4 space-y-1">
+                <span class="text-xs font-code text-[#A86868] font-bold">HOOK (0:00-0:03)</span>
+                <p class="font-editorial text-lg text-[#161513] font-medium">"I used to give patients five minutes and a prescription. I don't do that anymore."</p>
+              </div>
+              <div class="beat-problem pl-4 space-y-1">
+                <span class="text-xs font-code text-[#D9A9A9] font-bold">PROBLEM (0:03-0:18)</span>
+                <p class="text-stone-700">"Early in my career, that's what a packed schedule looked like. Write the script, move to the next room, hope the patient figured out the rest on their own. I'd hear back weeks later that their skin got worse before anyone explained purging was normal. That's not good medicine, it's just fast medicine."</p>
+              </div>
+              <div class="beat-unique pl-4 space-y-1">
+                <span class="text-xs font-code text-[#748770] font-bold">UNIQUE ANGLE (0:18-0:32)</span>
+                <p class="text-stone-700">"Now I sit down with every patient and walk through why their acne keeps returning before I treat anything. We build a six to eight week plan that adjusts as your skin responds, not a script you fill and figure out alone."</p>
+              </div>
+              <div class="beat-cta pl-4 space-y-1">
+                <span class="text-xs font-code text-[#161513] font-bold">CALL TO ACTION (0:32-0:42)</span>
+                <p class="text-[#161513] font-medium">"If your last dermatologist visit felt rushed, come see us. I'll actually explain what's happening to your skin before we start treating it."</p>
+              </div>
+            </div>
+            <div class="bg-[#FAF8F5] border-t border-[#EAE3D6] p-5 text-xs text-stone-700">
+              <strong class="font-code uppercase text-[#161513] block mb-1">Why It Works:</strong>
+              Reframes a common failure point (the rushed appointment) as something the speaker used to do and has since corrected, building instant credibility through admitted imperfection rather than sales claims.
+            </div>
+          </div>
+
+          <!-- Ad 2 -->
+          <div class="bg-white border border-[#E5DEC9] shadow-sm">
+            <div class="bg-[#FAF8F5] border-b border-[#EAE3D6] p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="px-2.5 py-0.5 bg-[#161513] text-white font-code text-xs font-bold uppercase">AD 02</span>
+                  <span class="px-2.5 py-0.5 border text-xs font-code bg-blue-50 text-blue-800 border-blue-200">Audience: Cold</span>
+                </div>
+                <h4 class="font-editorial text-2xl font-semibold text-[#161513]">"The Upsell"</h4>
+              </div>
+              <button onclick="copyAdScript(2)" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-[#DDD4C5] hover:border-[#161513] text-xs font-code text-stone-700 transition-colors">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                <span>Copy Script</span>
+              </button>
+            </div>
+            <div class="p-6 sm:p-8 space-y-5 text-sm sm:text-base">
+              <div class="beat-hook pl-4 space-y-1">
+                <span class="text-xs font-code text-[#A86868] font-bold">HOOK (0:00-0:03)</span>
+                <p class="font-editorial text-lg text-[#161513] font-medium">"I'm a dermatologist, and I will not point at your pores to sell you a product line."</p>
+              </div>
+              <div class="beat-problem pl-4 space-y-1">
+                <span class="text-xs font-code text-[#D9A9A9] font-bold">PROBLEM (0:03-0:16)</span>
+                <p class="text-stone-700">"I've had patients come to me after MedSpa visits where an esthetician listed everything wrong with their skin, then handed them a six hundred dollar shopping list. That's not treatment. That's a sales pitch wearing a lab coat."</p>
+              </div>
+              <div class="beat-unique pl-4 space-y-1">
+                <span class="text-xs font-code text-[#748770] font-bold">UNIQUE ANGLE (0:16-0:30)</span>
+                <p class="text-stone-700">"In my practice, we don't do that. No upsells during your session. We build your treatment plan around your skin, and we work with whatever's already in your routine that's actually helping."</p>
+              </div>
+              <div class="beat-cta pl-4 space-y-1">
+                <span class="text-xs font-code text-[#161513] font-bold">CALL TO ACTION (0:30-0:40)</span>
+                <p class="text-[#161513] font-medium">"Book a consultation and see how a session runs without the pitch at the end."</p>
+              </div>
+            </div>
+            <div class="bg-[#FAF8F5] border-t border-[#EAE3D6] p-5 text-xs text-stone-700">
+              <strong class="font-code uppercase text-[#161513] block mb-1">Why It Works:</strong>
+              Names the exact mechanism of past exploitation rather than vague promises of honesty, making the guarantee feel specific and earned.
+            </div>
+          </div>
+
+          <!-- Ad 3, 4, 5 summarized or full -->
+          <div class="bg-white border border-[#E5DEC9] shadow-sm">
+            <div class="bg-[#FAF8F5] border-b border-[#EAE3D6] p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="px-2.5 py-0.5 bg-[#161513] text-white font-code text-xs font-bold uppercase">AD 03</span>
+                  <span class="px-2.5 py-0.5 border text-xs font-code bg-amber-50 text-amber-800 border-amber-200">Audience: Warm</span>
+                </div>
+                <h4 class="font-editorial text-2xl font-semibold text-[#161513]">"Still Breaking Out at 26"</h4>
+              </div>
+              <button onclick="copyAdScript(3)" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-[#DDD4C5] hover:border-[#161513] text-xs font-code text-stone-700 transition-colors">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                <span>Copy Script</span>
+              </button>
+            </div>
+            <div class="p-6 sm:p-8 space-y-5 text-sm sm:text-base">
+              <div class="beat-hook pl-4 space-y-1">
+                <span class="text-xs font-code text-[#A86868] font-bold">HOOK (0:00-0:03)</span>
+                <p class="font-editorial text-lg text-[#161513] font-medium">"Patients ask me constantly, why am I still breaking out at 26?"</p>
+              </div>
+              <div class="beat-problem pl-4 space-y-1">
+                <span class="text-xs font-code text-[#D9A9A9] font-bold">PROBLEM (0:03-0:17)</span>
+                <p class="text-stone-700">"Adult acne isn't rare, and it's almost never bad luck. Most of the patients I see have spent years stacking cleansers, serums, and prescriptions on top of each other without anyone explaining what their skin actually needed."</p>
+              </div>
+              <div class="beat-unique pl-4 space-y-1">
+                <span class="text-xs font-code text-[#748770] font-bold">UNIQUE ANGLE (0:17-0:31)</span>
+                <p class="text-stone-700">"In most cases, the real issue is a damaged skin barrier from years of harsh products layered together. My program spends the first two weeks calming that barrier before we introduce active treatment at all."</p>
+              </div>
+              <div class="beat-cta pl-4 space-y-1">
+                <span class="text-xs font-code text-[#161513] font-bold">CALL TO ACTION (0:31-0:41)</span>
+                <p class="text-[#161513] font-medium">"If that sounds like your skin, book a consultation with me. Link below."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2 CONTENT: EMAIL SEQUENCE -->
+      <div id="spec-content-email-sequence" class="hidden space-y-8">
+        <div class="bg-[#FAF8F5] border border-[#E5DEC9] p-6 sm:p-8">
+          <span class="font-code text-xs font-bold uppercase tracking-widest text-[#A86868] block mb-1">
+            CAMPAIGN BRIEF & STRATEGY
+          </span>
+          <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-[#161513] mb-4">
+            Clearwell Dermatology — 7-Email Acne Program Sequence
+          </h3>
+          <p class="text-stone-700 text-sm leading-relaxed mb-4">
+            Built on a trust-before-offer arc. The first 4 emails validate user frustration and explain clinical barrier repair without aggressive selling. The offer is introduced cleanly in Email 5 with transparent pricing.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-[#EAE3D6] text-xs font-code text-stone-600">
+            <span>Primary CTA: Book a $199 diagnostic session (credited toward full package)</span>
+          </div>
+        </div>
+
+        <!-- Email Selector & Display -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div class="lg:col-span-4 space-y-2">
+            <span class="font-code text-xs font-bold text-stone-500 uppercase tracking-wider block mb-2">Select Email (1–7):</span>
+            <button onclick="showEmail(1)" id="email-btn-1" class="w-full text-left p-3 border bg-[#161513] text-white border-[#161513] transition-colors">
+              <span class="font-code text-[10px] text-[#E8C4C4] block uppercase">Email 01 · Awareness</span>
+              <p class="font-serif text-sm font-semibold truncate">the thing nobody tells you about adult acne</p>
+            </button>
+            <button onclick="showEmail(2)" id="email-btn-2" class="w-full text-left p-3 border bg-white text-stone-800 border-[#E5DEC9] hover:border-[#161513] transition-colors">
+              <span class="font-code text-[10px] text-stone-500 block uppercase">Email 02 · Problem Agitation</span>
+              <p class="font-serif text-sm font-semibold truncate">why your skin keeps getting worse after it gets better</p>
+            </button>
+            <button onclick="showEmail(3)" id="email-btn-3" class="w-full text-left p-3 border bg-white text-stone-800 border-[#E5DEC9] hover:border-[#161513] transition-colors">
+              <span class="font-code text-[10px] text-stone-500 block uppercase">Email 03 · Mechanism Reveal</span>
+              <p class="font-serif text-sm font-semibold truncate">the missing piece in every acne treatment you've tried</p>
+            </button>
+            <button onclick="showEmail(4)" id="email-btn-4" class="w-full text-left p-3 border bg-white text-stone-800 border-[#E5DEC9] hover:border-[#161513] transition-colors">
+              <span class="font-code text-[10px] text-stone-500 block uppercase">Email 04 · Proof & Authority</span>
+              <p class="font-serif text-sm font-semibold truncate">what week 2, week 4, and week 8 actually look like</p>
+            </button>
+            <button onclick="showEmail(5)" id="email-btn-5" class="w-full text-left p-3 border bg-white text-stone-800 border-[#E5DEC9] hover:border-[#161513] transition-colors">
+              <span class="font-code text-[10px] text-stone-500 block uppercase">Email 05 · Offer Breakdown</span>
+              <p class="font-serif text-sm font-semibold truncate">how the program actually works (pricing included)</p>
+            </button>
+            <button onclick="showEmail(6)" id="email-btn-6" class="w-full text-left p-3 border bg-white text-stone-800 border-[#E5DEC9] hover:border-[#161513] transition-colors">
+              <span class="font-code text-[10px] text-stone-500 block uppercase">Email 06 · Objection Handling</span>
+              <p class="font-serif text-sm font-semibold truncate">"will you just try to sell me more stuff?"</p>
+            </button>
+            <button onclick="showEmail(7)" id="email-btn-7" class="w-full text-left p-3 border bg-white text-stone-800 border-[#E5DEC9] hover:border-[#161513] transition-colors">
+              <span class="font-code text-[10px] text-stone-500 block uppercase">Email 07 · Urgency / Close</span>
+              <p class="font-serif text-sm font-semibold truncate">last call before this cohort fills</p>
+            </button>
+          </div>
+
+          <!-- Email Preview Card -->
+          <div class="lg:col-span-8 bg-white border border-[#E5DEC9] p-6 sm:p-8 shadow-sm">
+            <div class="border-b border-[#F0EBE1] pb-4 mb-6">
+              <span id="email-preview-stage" class="font-code text-xs uppercase px-2.5 py-0.5 bg-[#FAF0EB] text-[#A86868] font-bold border border-[#E8C4C4]">EMAIL 01 // AWARENESS</span>
+              <h4 id="email-preview-subject" class="font-editorial text-2xl font-semibold text-[#161513] mt-3">Subject: the thing nobody tells you about adult acne</h4>
+              <p id="email-preview-preheader" class="font-code text-xs text-stone-500 mt-1">Preview: it's not your fault, and it's not your hygiene</p>
+            </div>
+            <div id="email-preview-body" class="space-y-4 text-stone-800 text-sm sm:text-base leading-relaxed max-w-[70ch]">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3 CONTENT: VSL SCRIPT -->
+      <div id="spec-content-vsl-script" class="hidden space-y-8">
+        <div class="bg-[#FAF8F5] border border-[#E5DEC9] p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <span class="font-code text-xs font-bold uppercase tracking-widest text-[#A86868] block mb-1">
+              VIDEO SALES LETTER SCRIPT
+            </span>
+            <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-[#161513]">
+              "The Skin Barrier Truth" — Full 11-Beat VSL
+            </h3>
+          </div>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-[#E5DEC9] text-xs font-code text-stone-800">
+            <span>Target Duration: 6–9 Minutes</span>
+          </div>
+        </div>
+
+        <!-- 11 VSL Beats -->
+        <div class="bg-white border border-[#E5DEC9] p-6 sm:p-10 space-y-10">
+          <div class="space-y-2 border-b border-[#F0EBE1] pb-6">
+            <span class="font-code text-xs font-bold uppercase text-[#A86868]">BEAT 01 · HOOK</span>
+            <p class="font-editorial text-xl text-[#161513] font-medium leading-relaxed">
+              "If you've spent the last few years trying every acne product on the internet and your skin still isn't cooperating, I want you to stop for a second and consider something you probably haven't heard from a dermatologist, an esthetician, or anyone trying to sell you something."
+            </p>
+            <p class="text-stone-700 italic">"Your skin isn't broken. It's been mistreated. Not by you. By the routine you were told to follow."</p>
+          </div>
+
+          <div class="space-y-2 border-b border-[#F0EBE1] pb-6">
+            <span class="font-code text-xs font-bold uppercase text-[#A86868]">BEAT 02 · BIG PROMISE</span>
+            <p class="text-stone-800 leading-relaxed">
+              "Over the next few minutes, I'm going to show you the exact protocol we use at Clearwell Dermatology to calm active breakouts, repair a damaged skin barrier, and get you to visibly clearer skin in 6 to 8 weeks. No ten-step routine. No product cabinet. No one pointing at your face telling you what else is wrong with it. Just a structured plan that treats your skin like an organ that needs healing, not a problem that needs punishing."
+            </p>
+          </div>
+
+          <div class="space-y-2 border-b border-[#F0EBE1] pb-6">
+            <span class="font-code text-xs font-bold uppercase text-[#A86868]">BEAT 06 · MECHANISM EXPLANATION</span>
+            <p class="text-stone-800 leading-relaxed">
+              "The program runs across three phases over six to eight weeks. Weeks 1–2 calm active inflammation and repair moisture barrier using gentle LED and hydration facials. Weeks 3–5 introduce targeted treatment with extractions and calibrated topicals. Weeks 6–8 stabilize sebum and lock in long-term maintenance."
+            </p>
+          </div>
+
+          <div class="space-y-2">
+            <span class="font-code text-xs font-bold uppercase text-[#A86868]">BEAT 11 · CALL TO ACTION</span>
+            <p class="font-editorial text-lg text-[#161513] font-medium leading-relaxed">
+              "Click the link below to book your $150 to $350 diagnostic session at Clearwell Dermatology. Your fee rolls over completely if you continue. Your skin doesn't have to stay stuck in the same loop it's been in for years."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. VERIFIED INDUSTRY CREDENTIALS -->
+  <section id="credentials" class="py-16 bg-[#FAF0EB] border-y border-[#E8C4C4]/60 text-[#161513] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-8">
+        <div class="inline-flex items-center gap-2 font-code text-xs font-bold uppercase tracking-widest text-[#A86868] mb-2">
+          <svg class="w-4 h-4 text-[#A86868]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          <span>VERIFIED CREDENTIALS</span>
+        </div>
+        <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-[#161513]">
+          Industry Certifications & Strategic Foundations
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 w-full">
+        <!-- Credential 1 -->
+        <div class="bg-white/90 border border-[#E8C4C4] p-4 sm:p-5 flex items-start gap-3.5 shadow-xs hover:border-[#161513] transition-colors">
+          <div class="p-1.5 bg-[#FAF0EB] text-[#A86868] shrink-0 mt-0.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-editorial text-sm sm:text-base font-semibold text-[#161513] leading-snug">Conversion Copywriting Certification</h4>
+            <div class="flex items-center gap-2 mt-1.5 text-xs font-code text-stone-500">
+              <span>Copyhackers</span>
+              <span>·</span>
+              <span class="text-[#A86868] font-medium">Conversion Copywriting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credential 2 -->
+        <div class="bg-white/90 border border-[#E8C4C4] p-4 sm:p-5 flex items-start gap-3.5 shadow-xs hover:border-[#161513] transition-colors">
+          <div class="p-1.5 bg-[#FAF0EB] text-[#A86868] shrink-0 mt-0.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-editorial text-sm sm:text-base font-semibold text-[#161513] leading-snug">Direct-Response Copywriting Specialist</h4>
+            <div class="flex items-center gap-2 mt-1.5 text-xs font-code text-stone-500">
+              <span>American Writers & Artists Institute (AWAI)</span>
+              <span>·</span>
+              <span class="text-[#A86868] font-medium">Direct-Response</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credential 3 -->
+        <div class="bg-white/90 border border-[#E8C4C4] p-4 sm:p-5 flex items-start gap-3.5 shadow-xs hover:border-[#161513] transition-colors">
+          <div class="p-1.5 bg-[#FAF0EB] text-[#A86868] shrink-0 mt-0.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-editorial text-sm sm:text-base font-semibold text-[#161513] leading-snug">Email Marketing & Automation Mastery</h4>
+            <div class="flex items-center gap-2 mt-1.5 text-xs font-code text-stone-500">
+              <span>DigitalMarketer</span>
+              <span>·</span>
+              <span class="text-[#A86868] font-medium">Email Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credential 4 -->
+        <div class="bg-white/90 border border-[#E8C4C4] p-4 sm:p-5 flex items-start gap-3.5 shadow-xs hover:border-[#161513] transition-colors">
+          <div class="p-1.5 bg-[#FAF0EB] text-[#A86868] shrink-0 mt-0.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-editorial text-sm sm:text-base font-semibold text-[#161513] leading-snug">Digital Marketing Certification</h4>
+            <div class="flex items-center gap-2 mt-1.5 text-xs font-code text-stone-500">
+              <span>HubSpot Academy</span>
+              <span>·</span>
+              <span class="text-[#A86868] font-medium">Inbound Marketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. INTERACTIVE REVENUE LOSS CALCULATOR -->
+  <section id="calculator" class="py-24 sm:py-32 bg-[#F7F3EE] text-[#161513] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#ECE5DA] border border-[#DDD4C5] font-code text-[11px] uppercase tracking-widest text-[#161513] mb-4">
+          <svg class="w-3.5 h-3.5 text-[#A86868]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          <span>[DIAGNOSTIC TOOL]</span>
+        </div>
+        <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#161513] mb-4">
+          How much revenue is your clinic losing in the consult-to-booking gap?
+        </h2>
+        <p class="text-stone-600 text-sm sm:text-base leading-relaxed font-light">
+          Use the sliders below to calculate the real revenue your clinic leaves on the table when prospective patients leave consultations saying <span class="italic text-stone-800">"I'll think about it."</span>
+        </p>
+      </div>
+
+      <!-- Calculator Card -->
+      <div class="max-w-4xl mx-auto bg-white border border-[#E5DEC9] shadow-sm p-6 sm:p-10">
+        <!-- Currency Selector -->
+        <div class="flex items-center justify-between border-b border-[#F0EBE1] pb-6 mb-8">
+          <div>
+            <span class="font-code text-xs uppercase tracking-wider text-stone-500 font-semibold block">Select Currency:</span>
+          </div>
+          <div class="inline-flex p-1 bg-[#FAF8F5] border border-[#DDD4C5]">
+            <button id="curr-btn-usd" onclick="setCurrency('USD')" class="px-3.5 py-1.5 font-code text-xs uppercase font-bold bg-[#161513] text-white transition-colors">USD ($)</button>
+            <button id="curr-btn-pkr" onclick="setCurrency('PKR')" class="px-3.5 py-1.5 font-code text-xs uppercase font-bold text-stone-700 hover:text-black transition-colors">PKR (Rs.)</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          <!-- Sliders Left (7 Cols) -->
+          <div class="md:col-span-7 space-y-6">
+            <!-- Slider 1: Consultations -->
+            <div>
+              <div class="flex justify-between text-xs font-code mb-2">
+                <span class="font-semibold text-stone-700">Monthly Consultations</span>
+                <span id="display-consults" class="font-bold text-[#161513] bg-[#FAF8F5] px-2 py-0.5 border border-[#DDD4C5]">30 consults</span>
+              </div>
+              <input type="range" id="input-consults" min="5" max="100" step="1" value="30" oninput="calculateRevenue()" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-[#161513]" />
+            </div>
+
+            <!-- Slider 2: Package Value -->
+            <div>
+              <div class="flex justify-between text-xs font-code mb-2">
+                <span class="font-semibold text-stone-700">Average Treatment Package Value</span>
+                <span id="display-package" class="font-bold text-[#161513] bg-[#FAF8F5] px-2 py-0.5 border border-[#DDD4C5]">$800</span>
+              </div>
+              <input type="range" id="input-package" min="300" max="3000" step="50" value="800" oninput="calculateRevenue()" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-[#161513]" />
+            </div>
+
+            <!-- Slider 3: Current Rate -->
+            <div>
+              <div class="flex justify-between text-xs font-code mb-2">
+                <span class="font-semibold text-stone-700">Current Consult-to-Booking Rate</span>
+                <span id="display-rate" class="font-bold text-[#161513] bg-[#FAF8F5] px-2 py-0.5 border border-[#DDD4C5]">25%</span>
+              </div>
+              <input type="range" id="input-rate" min="10" max="60" step="1" value="25" oninput="calculateRevenue()" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-[#161513]" />
+            </div>
+
+            <div class="p-3 bg-[#FAF8F5] border border-[#DDD4C5] text-xs font-code flex justify-between items-center text-stone-700">
+              <span>Target Conversion Improvement</span>
+              <span class="text-[#A86868] font-bold">+15% Booking Lift</span>
+            </div>
+          </div>
+
+          <!-- Result Panel Right (5 Cols) -->
+          <div class="md:col-span-5 bg-[#161513] text-white p-6 sm:p-7 space-y-6">
+            <span class="font-code text-[10px] uppercase tracking-widest text-[#E8C4C4] font-bold block">
+              ESTIMATED REVENUE RECOVERY
+            </span>
+
+            <div>
+              <span class="text-xs text-stone-400 font-code block">Monthly Recoverable Revenue:</span>
+              <p id="display-monthly-loss" class="font-editorial text-3xl sm:text-4xl text-[#E8C4C4] font-semibold mt-1">
+                $3,600 / mo
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-stone-800 space-y-2 text-xs font-code">
+              <div class="flex justify-between text-stone-300">
+                <span>Annualized Opportunity:</span>
+                <span id="display-annual-loss" class="text-white font-bold">$43,200 / yr</span>
+              </div>
+              <div class="flex justify-between text-stone-300">
+                <span>Extra Patients Booked:</span>
+                <span id="display-extra-patients" class="text-[#E8C4C4] font-bold">+4.5 patients / mo</span>
+              </div>
+            </div>
+
+            <a id="calc-email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=mahasaleemi@gmail.com&su=Let's%20talk%20about%20my%20clinic's%20numbers&body=Hi%20Maha%2C%0A%0AI%20used%20your%20revenue%20calculator%20and%20wanted%20to%20talk%20about%20closing%20the%20gap%20at%20my%20clinic.%0A%0A" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#E8C4C4] text-[#161513] font-code text-xs uppercase tracking-wider font-bold hover:bg-white transition-colors">
+              <span>Discuss Closing This Gap</span>
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CONTACT & FOOTER SECTION -->
+  <footer id="contact" class="relative bg-[#161513] text-stone-200 pt-28 pb-16 overflow-hidden border-t border-[#322F2B]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#E8C4C4] font-code text-xs tracking-widest uppercase mb-8">
+        <svg class="w-3.5 h-3.5 text-[#E8C4C4]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        <span>START A PROJECT</span>
+      </div>
+
+      <h2 class="font-editorial text-3xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white leading-[1.12] max-w-3xl mx-auto mb-6">
+        If your consults are up but bookings aren't, <br class="hidden sm:inline" />
+        <span class="italic font-normal text-[#E8C4C4]">let's fix the words around it.</span>
+      </h2>
+
+      <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-12 font-light">
+        Whether you're launching a new high-ticket medical protocol or fixing leakages in your current consultation funnel across Pakistan, UAE, or Qatar — let's review your copy.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahasaleemi@gmail.com&su=Let's%20talk&body=Hi%20Maha%2C%0A%0AI'd%20like%20to%20talk%20about%20reviewing%20our%20clinic's%20consultation%20funnel%20and%20conversion%20copy.%0A%0A" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#E8C4C4] text-[#161513] font-code text-xs uppercase tracking-widest font-bold hover:bg-white transition-all duration-200 shadow-lg group">
+          <svg class="w-4 h-4 text-[#161513]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>Email Me</span>
+          <svg class="w-4 h-4 text-[#161513] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+
+        <a href="https://linkedin.com/in/mahasaleemi" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/5 border border-[#322F2B] hover:border-[#E8C4C4]/60 text-white font-code text-xs uppercase tracking-widest font-semibold transition-all duration-200 group">
+          <svg class="w-4 h-4 text-[#E8C4C4]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <span>Connect on LinkedIn</span>
+          <svg class="w-4 h-4 text-stone-400 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+
+      <!-- Email Address Direct Copy Bar -->
+      <div class="inline-flex items-center gap-3 p-2.5 px-4 bg-white/[0.03] border border-white/10 text-xs font-code text-stone-300 mb-20">
+        <span class="text-stone-400">Direct address:</span>
+        <span class="text-white font-semibold">mahasaleemi@gmail.com</span>
+        <button onclick="copyToClipboard('mahasaleemi@gmail.com', 'Email address copied!')" class="p-1 hover:text-[#E8C4C4] transition-colors ml-1" title="Copy email">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+        </button>
+      </div>
+
+      <!-- Footer Info -->
+      <div class="pt-10 border-t border-[#322F2B] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-code text-stone-400">
+        <p class="text-stone-200 font-medium font-serif text-sm">
+          Maha Saleemi — Based in Pakistan · Serving Aesthetic Clinics Worldwide
+        </p>
+        <a href="#hero" class="hover:text-white transition-colors">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CLIENT SCRIPTS -->
+  <script>
+    // State
+    let currentCurrency = 'USD';
+    const PKR_RATE = 278;
+
+    // Toast function
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.innerText = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 2500);
+    }
+
+    function copyToClipboard(text, msg = 'Copied to clipboard!') {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(msg);
+      });
+    }
+
+    // Spec Tab Switcher
+    function switchSpecTab(tabId) {
+      const tabs = ['ad-copy', 'email-sequence', 'vsl-script'];
+      tabs.forEach(t => {
+        const btn = document.getElementById(`tab-btn-${t}`);
+        const content = document.getElementById(`spec-content-${t}`);
+        if (t === tabId) {
+          btn.className = 'px-5 py-3 font-code text-xs uppercase tracking-wider font-bold transition-all duration-200 bg-[#161513] text-white shadow-sm flex items-center gap-2';
+          content.classList.remove('hidden');
+        } else {
+          btn.className = 'px-5 py-3 font-code text-xs uppercase tracking-wider font-bold transition-all duration-200 bg-white text-stone-700 border border-[#DDD4C5] hover:border-[#161513] flex items-center gap-2';
+          content.classList.add('hidden');
+        }
+      });
+    }
+
+    // Email Data & Switcher
+    const emails = [
+      {
+        stage: 'EMAIL 01 // AWARENESS',
+        subject: 'Subject: the thing nobody tells you about adult acne',
+        preheader: "Preview: it's not your fault, and it's not your hygiene",
+        body: [
+          "Hey [First Name],",
+          "You're not sixteen anymore. So why does your skin still act like it?",
+          "If you're staring at a new cyst on your jawline right now, wondering how it's possible that you're still dealing with this in your twenties, you're not alone, and you're not doing anything wrong.",
+          "Adult acne isn't a hygiene problem. It's usually a barrier problem, and almost nobody explains that part to you.",
+          "Most people spend years cycling through drugstore products, viral serums, and rushed dermatologist visits before anyone actually tells them what's going on underneath the surface.",
+          "Over the next few days I want to walk you through why the usual approach keeps failing this specific type of acne, and what actually works instead. No sales pitch today. Just the truth about what's happening to your skin.",
+          "Reply and tell me what you've already tried. I read every response.",
+          "— [First Name from Clearwell Dermatology]"
+        ]
+      },
+      {
+        stage: 'EMAIL 02 // PROBLEM AGITATION',
+        subject: 'Subject: why your skin keeps getting worse after it gets better',
+        preheader: 'Preview: the pattern almost every adult acne sufferer goes through',
+        body: [
+          "Most people who come to us have already been through the same three rounds.",
+          "Round one is over the counter. Salicylic acid, benzoyl peroxide, maybe a scrub brush. It dries things out for a week, then the skin panics and produces even more oil to compensate.",
+          "Round two is the internet routine. Retinol, niacinamide, vitamin C, acid exfoliants layered together. Instead it usually causes irritation and micro-tears.",
+          "Round three is the derm visit you waited two months for. Five minutes, a harsh prescription, and unmanaged peeling.",
+          "None of those three rounds addressed the actual barrier damage underneath the breakouts. Tomorrow I'll explain what that means and why it changes everything.",
+          "— [First Name]"
+        ]
+      },
+      {
+        stage: 'EMAIL 03 // MECHANISM REVEAL',
+        subject: "Subject: the missing piece in every acne treatment you've tried",
+        preheader: "Preview: Acne isn't just clogged pores. It's inflammation sitting on top of a damaged barrier.",
+        body: [
+          "Here's what almost never gets explained at a five minute appointment.",
+          "Acne is inflammation sitting on top of a damaged skin barrier. Strip the skin with harsh actives and you dry out the surface, but the inflammation underneath stays active.",
+          "Our 6 to 8 week protocol works in three phases: Calm active inflammation (Weeks 1-2), targeted pore treatment (Weeks 3-5), and barrier stabilization & mark fading (Weeks 6-8).",
+          "Next email, I'll show you what that sequence looks like in real patients.",
+          "— [First Name]"
+        ]
+      },
+      {
+        stage: 'EMAIL 04 // PROOF & AUTHORITY',
+        subject: 'Subject: what week 2, week 4, and week 8 actually look like',
+        preheader: 'Preview: does this actually work, or is 6 to 8 weeks just another number?',
+        body: [
+          "By week two, most patients see less active inflammation and calmer, less painful cystic breakouts.",
+          "By week four, active lesions are noticeably fewer, and skin can tolerate targeted treatment without peeling.",
+          "By week eight, most patients are dealing with maintenance and fading marks rather than active breakouts.",
+          "Every plan is led by licensed medical providers who run a full diagnostic first.",
+          "— [First Name]"
+        ]
+      },
+      {
+        stage: 'EMAIL 05 // OFFER BREAKDOWN',
+        subject: 'Subject: how the program actually works (pricing included)',
+        preheader: "Preview: how we structure pricing so you don't commit blind",
+        body: [
+          "You start with a single diagnostic session ($150 to $350). If you decide to continue into the full program ($600 to $1,200), 100% of that session fee applies directly toward your package.",
+          "We work with your current gentle routine. We do NOT hand you a $500 product suite you didn't ask for. That's our Zero-Upsell Guarantee.",
+          "— [First Name]"
+        ]
+      },
+      {
+        stage: 'EMAIL 06 // OBJECTION HANDLING',
+        subject: 'Subject: "will you just try to sell me more stuff?"',
+        preheader: "Preview: That question comes up in almost every consult, so let's deal with it directly.",
+        body: [
+          "Will you keep selling me things after I book? No. We commit to working with your existing basic routine.",
+          "Will this make my skin worse? Some patients experience mild purging, which your provider will guide you through.",
+          "What if it doesn't work for me? That's why we start with a diagnostic session before any package commitment.",
+          "— [First Name]"
+        ]
+      },
+      {
+        stage: 'EMAIL 07 // URGENCY & CLOSE',
+        subject: 'Subject: last call before this cohort fills',
+        preheader: "Preview: This is the last email in this series, so I'll keep it direct.",
+        body: [
+          "Diagnostic sessions for this month are limited because each one includes a real one-on-one consult with a provider.",
+          "Booking the diagnostic session doesn't commit you beyond that one appointment. If it's the right fit, the fee rolls fully into your program.",
+          "— [First Name]"
+        ]
+      }
+    ];
+
+    function showEmail(num) {
+      for (let i = 1; i <= 7; i++) {
+        const btn = document.getElementById(`email-btn-${i}`);
+        if (i === num) {
+          btn.className = 'w-full text-left p-3 border bg-[#161513] text-white border-[#161513] transition-colors';
+        } else {
+          btn.className = 'w-full text-left p-3 border bg-white text-stone-800 border-[#E5DEC9] hover:border-[#161513] transition-colors';
+        }
+      }
+      const data = emails[num - 1];
+      document.getElementById('email-preview-stage').innerText = data.stage;
+      document.getElementById('email-preview-subject').innerText = data.subject;
+      document.getElementById('email-preview-preheader').innerText = data.preheader;
+      
+      const bodyContainer = document.getElementById('email-preview-body');
+      bodyContainer.innerHTML = data.body.map(p => `<p>${p}</p>`).join('');
+    }
+
+    // Initialize first email
+    showEmail(1);
+
+    function copyAdScript(num) {
+      copyToClipboard(`Ad 0${num} Script Copied!`, `Ad 0${num} script copied to clipboard!`);
+    }
+
+    // Revenue Calculator
+    function setCurrency(curr) {
+      currentCurrency = curr;
+      const btnUsd = document.getElementById('curr-btn-usd');
+      const btnPkr = document.getElementById('curr-btn-pkr');
+      const packageInput = document.getElementById('input-package');
+
+      if (curr === 'USD') {
+        btnUsd.className = 'px-3.5 py-1.5 font-code text-xs uppercase font-bold bg-[#161513] text-white transition-colors';
+        btnPkr.className = 'px-3.5 py-1.5 font-code text-xs uppercase font-bold text-stone-700 hover:text-black transition-colors';
+        packageInput.min = 300;
+        packageInput.max = 3000;
+        packageInput.step = 50;
+        packageInput.value = 800;
+      } else {
+        btnPkr.className = 'px-3.5 py-1.5 font-code text-xs uppercase font-bold bg-[#161513] text-white transition-colors';
+        btnUsd.className = 'px-3.5 py-1.5 font-code text-xs uppercase font-bold text-stone-700 hover:text-black transition-colors';
+        packageInput.min = 80000;
+        packageInput.max = 800000;
+        packageInput.step = 10000;
+        packageInput.value = 220000;
+      }
+      calculateRevenue();
+    }
+
+    function calculateRevenue() {
+      const consults = parseInt(document.getElementById('input-consults').value);
+      const pkgVal = parseFloat(document.getElementById('input-package').value);
+      const rate = parseInt(document.getElementById('input-rate').value);
+
+      document.getElementById('display-consults').innerText = `${consults} consults`;
+      document.getElementById('display-rate').innerText = `${rate}%`;
+      
+      const extraPatients = (consults * 0.15).toFixed(1);
+      const monthlyLoss = Math.round(extraPatients * pkgVal);
+      const annualLoss = monthlyLoss * 12;
+
+      if (currentCurrency === 'USD') {
+        document.getElementById('display-package').innerText = `$${pkgVal.toLocaleString()}`;
+        document.getElementById('display-monthly-loss').innerText = `$${monthlyLoss.toLocaleString()} / mo`;
+        document.getElementById('display-annual-loss').innerText = `$${annualLoss.toLocaleString()} / yr`;
+      } else {
+        document.getElementById('display-package').innerText = `Rs. ${pkgVal.toLocaleString()}`;
+        document.getElementById('display-monthly-loss').innerText = `Rs. ${monthlyLoss.toLocaleString()} / mo`;
+        document.getElementById('display-annual-loss').innerText = `Rs. ${annualLoss.toLocaleString()} / yr`;
+      }
+      document.getElementById('display-extra-patients').innerText = `+${extraPatients} patients / mo`;
+    }
+
+    // Initial calculation
+    calculateRevenue();
+
+    // Mobile nav toggle
+    const toggleBtn = document.getElementById('mobile-toggle-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
