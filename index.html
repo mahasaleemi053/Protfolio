@@ -1233,15 +1233,15 @@
       if (curr === 'USD') {
         btnUsd.className = 'px-3.5 py-1.5 font-code text-xs uppercase font-bold bg-[#161513] text-white transition-colors';
         btnPkr.className = 'px-3.5 py-1.5 font-code text-xs uppercase font-bold text-stone-700 hover:text-black transition-colors';
-        packageInput.min = 300;
+        packageInput.min = 100;
         packageInput.max = 3000;
         packageInput.step = 50;
         packageInput.value = 800;
       } else {
         btnPkr.className = 'px-3.5 py-1.5 font-code text-xs uppercase font-bold bg-[#161513] text-white transition-colors';
         btnUsd.className = 'px-3.5 py-1.5 font-code text-xs uppercase font-bold text-stone-700 hover:text-black transition-colors';
-        packageInput.min = 80000;
-        packageInput.max = 800000;
+        packageInput.min = 10000;
+        packageInput.max = 500000;
         packageInput.step = 10000;
         packageInput.value = 220000;
       }
