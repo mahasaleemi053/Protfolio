@@ -47,3 +47,10 @@ dialog{border:0;border-radius:20px;max-width:940px;width:calc(100% - 20px);paddi
 footer{background:var(--ink);color:#bfa98f;padding:30px 0 calc(30px + env(safe-area-inset-bottom,0));font-size:.88rem}footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .js .rv{opacity:0;transform:translateY(16px);transition:.7s}.js .rv.in{opacity:1;transform:none}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hc{transform:none}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}.db .two,.meta{grid-template-columns:1fr}.sop{grid-template-columns:1fr}.sop div:after{display:none}.brs{grid-template-columns:1fr}section{padding:54px 0}}
+.cf{display:grid;gap:22px;margin-top:28px}.cfc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:24px;grid-template-columns:1fr 1.1fr;align-items:start}
+.mind{font:italic 500 1.08rem Fraunces,Georgia,serif;border-left:3px solid var(--acc);padding-left:14px;margin:10px 0 14px}
+.vs{display:grid;gap:10px}.vs div{border-radius:12px;padding:12px 14px;font-size:.9rem;line-height:1.5}.vs .a{background:#EFE2CC;color:var(--mute)}.vs .b{background:var(--ink);color:var(--bg)}.vs small{display:block;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:2px;color:var(--acc)}
+pre.tree{background:var(--ink);color:#e9dbc4;border-radius:14px;padding:18px 16px;font:12.5px/1.6 ui-monospace,Menlo,Consolas,monospace;overflow-x:auto;margin:0;white-space:pre}
+.bph{display:grid;gap:28px;grid-template-columns:.75fr 1.25fr;align-items:start;margin-top:26px}.rules{padding-left:18px;margin:12px 0 0}.rules li{margin-bottom:6px;color:var(--mute);font-size:.95rem}
+.dk .rules li{color:#d6c4ab}.lab{display:inline-block;border:1px solid var(--acc);color:var(--acc);border-radius:99px;padding:3px 12px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+@media(max-width:860px){.cfc,.bph{grid-template-columns:1fr}.brs{grid-template-columns:1fr!important}}
